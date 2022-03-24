@@ -78,6 +78,9 @@
             "System.Text.Encoding.CodePages": {
               "target": "Package",
               "version": "[6.0.0, )"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             }
           },

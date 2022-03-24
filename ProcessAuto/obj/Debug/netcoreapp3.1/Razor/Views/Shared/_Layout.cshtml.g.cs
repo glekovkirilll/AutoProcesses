@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #pragma checksum "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "9a259986424637c8afb51b259ceb194ecad75091"
+=======
+#pragma checksum "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "4439b9f1665918d7999a65fc04860dd9d929289b"
+>>>>>>> Stashed changes
 =======
 #pragma checksum "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "4439b9f1665918d7999a65fc04860dd9d929289b"
 >>>>>>> Stashed changes
@@ -31,7 +35,11 @@ using ProcessAuto.Models;
 #line hidden
 #nullable disable
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9a259986424637c8afb51b259ceb194ecad75091", @"/Views/Shared/_Layout.cshtml")]
+=======
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4439b9f1665918d7999a65fc04860dd9d929289b", @"/Views/Shared/_Layout.cshtml")]
+>>>>>>> Stashed changes
 =======
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4439b9f1665918d7999a65fc04860dd9d929289b", @"/Views/Shared/_Layout.cshtml")]
 >>>>>>> Stashed changes
@@ -60,6 +68,9 @@ using ProcessAuto.Models;
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_13 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/lib/jquery/dist/jquery.min.js"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_14 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_15 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", "~/js/site.js", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         #line hidden
         #pragma warning disable 0649
@@ -92,7 +103,11 @@ using ProcessAuto.Models;
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a259986424637c8afb51b259ceb194ecad750918490", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b9102", async() => {
+>>>>>>> Stashed changes
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b9102", async() => {
 >>>>>>> Stashed changes
@@ -106,7 +121,11 @@ using ProcessAuto.Models;
 #nullable disable
                 WriteLiteral(" - ProcessAuto</title>\r\n    ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9a259986424637c8afb51b259ceb194ecad750919141", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4439b9f1665918d7999a65fc04860dd9d929289b9753", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4439b9f1665918d7999a65fc04860dd9d929289b9753", async() => {
 >>>>>>> Stashed changes
@@ -125,7 +144,11 @@ using ProcessAuto.Models;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9a259986424637c8afb51b259ceb194ecad7509110319", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4439b9f1665918d7999a65fc04860dd9d929289b10931", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4439b9f1665918d7999a65fc04860dd9d929289b10931", async() => {
 >>>>>>> Stashed changes
@@ -156,9 +179,15 @@ using ProcessAuto.Models;
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a259986424637c8afb51b259ceb194ecad7509112202", async() => {
                 WriteLiteral("\r\n    <header>\r\n        <nav class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\">\r\n            <div class=\"container\">\r\n                ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a259986424637c8afb51b259ceb194ecad7509112658", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b12814", async() => {
+                WriteLiteral("\r\n    <header>\r\n        <nav class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\">\r\n            <div class=\"container\">\r\n                ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b13270", async() => {
+>>>>>>> Stashed changes
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b12814", async() => {
                 WriteLiteral("\r\n    <header>\r\n        <nav class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\">\r\n            <div class=\"container\">\r\n                ");
@@ -191,7 +220,11 @@ using ProcessAuto.Models;
                 <div class=""navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"">
                     ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9a259986424637c8afb51b259ceb194ecad7509114846", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4439b9f1665918d7999a65fc04860dd9d929289b15458", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4439b9f1665918d7999a65fc04860dd9d929289b15458", async() => {
 >>>>>>> Stashed changes
@@ -210,7 +243,11 @@ using ProcessAuto.Models;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                    <ul class=\"navbar-nav flex-grow-1\">\r\n                        <li class=\"nav-item\">\r\n                            ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a259986424637c8afb51b259ceb194ecad7509116163", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b16775", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b16775", async() => {
 >>>>>>> Stashed changes
@@ -235,7 +272,11 @@ using ProcessAuto.Models;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a259986424637c8afb51b259ceb194ecad7509118002", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b18614", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b18614", async() => {
 >>>>>>> Stashed changes
@@ -317,7 +358,11 @@ using ProcessAuto.Models;
 #nullable disable
                 WriteLiteral("                            <li class=\"nav-item\">\r\n                                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a259986424637c8afb51b259ceb194ecad7509120108", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b24403", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b24403", async() => {
 >>>>>>> Stashed changes
@@ -330,8 +375,13 @@ using ProcessAuto.Models;
                 __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.Area = (string)__tagHelperAttribute_4.Value;
                 __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_4);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.Controller = (string)__tagHelperAttribute_10.Value;
                 __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_10);
+=======
+                __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.Controller = (string)__tagHelperAttribute_12.Value;
+                __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_12);
+>>>>>>> Stashed changes
 =======
                 __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.Controller = (string)__tagHelperAttribute_12.Value;
                 __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_12);
@@ -348,7 +398,11 @@ using ProcessAuto.Models;
                 WriteLiteral("\r\n                            </li>\r\n");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 32 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
+=======
+#line 38 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 38 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
 >>>>>>> Stashed changes
@@ -360,7 +414,11 @@ using ProcessAuto.Models;
                 WriteLiteral("                    </ul>\r\n                </div>\r\n            </div>\r\n        </nav>\r\n    </header>\r\n    <div class=\"container\">\r\n        <main role=\"main\" class=\"pb-3\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 40 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
+=======
+#line 46 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 46 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
 >>>>>>> Stashed changes
@@ -371,7 +429,11 @@ using ProcessAuto.Models;
 #nullable disable
                 WriteLiteral("\r\n        </main>\r\n    </div>\r\n\r\n    <footer class=\"border-top footer text-muted\">\r\n        <div class=\"container\">\r\n            &copy; 2022 - ProcessAuto - ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a259986424637c8afb51b259ceb194ecad7509122724", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b27019", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b27019", async() => {
 >>>>>>> Stashed changes
@@ -395,7 +457,11 @@ using ProcessAuto.Models;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n        </div>\r\n    </footer>\r\n    ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a259986424637c8afb51b259ceb194ecad7509124406", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b28701", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b28701", async() => {
 >>>>>>> Stashed changes
@@ -404,7 +470,11 @@ using ProcessAuto.Models;
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_11);
+=======
+                __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_13);
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_13);
 >>>>>>> Stashed changes
@@ -417,7 +487,11 @@ using ProcessAuto.Models;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a259986424637c8afb51b259ceb194ecad7509125507", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b29802", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b29802", async() => {
 >>>>>>> Stashed changes
@@ -426,7 +500,11 @@ using ProcessAuto.Models;
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_12);
+=======
+                __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_14);
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_14);
 >>>>>>> Stashed changes
@@ -439,7 +517,11 @@ using ProcessAuto.Models;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a259986424637c8afb51b259ceb194ecad7509126608", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b30903", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4439b9f1665918d7999a65fc04860dd9d929289b30903", async() => {
 >>>>>>> Stashed changes
@@ -450,15 +532,21 @@ using ProcessAuto.Models;
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper.Src = (string)__tagHelperAttribute_13.Value;
                 __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_13);
 #nullable restore
 #line 51 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
 =======
+=======
+>>>>>>> Stashed changes
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper.Src = (string)__tagHelperAttribute_15.Value;
                 __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_15);
 #nullable restore
 #line 57 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 __Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper.AppendVersion = true;
 
@@ -476,7 +564,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper.AppendVersion = true;
                 WriteLiteral("\r\n    ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 52 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
+=======
+#line 58 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 58 "C:\Users\ukwim\Documents\GitHub\AutoProcesses\ProcessAuto\Views\Shared\_Layout.cshtml"
 >>>>>>> Stashed changes

@@ -3,8 +3,11 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.10": {
 =======
+=======
+>>>>>>> Stashed changes
       "ExcelDataReader/3.6.0": {
         "type": "package",
         "compile": {
@@ -566,7 +569,11 @@
         }
       },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "System.ComponentModel.Annotations/4.7.0": {
+=======
+      "Microsoft.NETCore.Platforms/2.0.0": {
+>>>>>>> Stashed changes
 =======
       "Microsoft.NETCore.Platforms/2.0.0": {
 >>>>>>> Stashed changes
@@ -2607,9 +2614,12 @@
   },
   "libraries": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.10": {
       "sha512": "s5jFewA59+K/MXnib5eC/WVCDyL4EvSVtBzvXmAlTcZ9iBqqw+4oyFWP5hHy2NZuynjvKDFsokR9zEDrdEwLYA==",
 =======
+=======
+>>>>>>> Stashed changes
     "ExcelDataReader/3.6.0": {
       "sha512": "eXyxTwG7EEWpgQX3juZ2KcndqTqm/ydx9GXS2lUiMJU54U4h5eXdygRtVgINv0t60ezPWEb+lL7uM7Q+wm5BBA==",
       "type": "package",
@@ -6951,18 +6961,43 @@
 >>>>>>> Stashed changes
       ]
     },
+<<<<<<< Updated upstream
     "Microsoft.EntityFrameworkCore/3.1.10": {
       "sha512": "0IhJl9mVJ4IhHobKvOo2iLB0xfxX2eYaSz4VZX+bMSm8IyZA1tOmyaOtg7oSzeUAe6eqpKVQLTgMFzk2AqCcaA==",
       "type": "package",
       "path": "microsoft.entityframeworkcore/3.1.10",
+=======
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+>>>>>>> Stashed changes
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+<<<<<<< Updated upstream
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.xml",
         "microsoft.entityframeworkcore.3.1.10.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
+=======
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt"
+>>>>>>> Stashed changes
       ]
     },
     "Microsoft.EntityFrameworkCore.Abstractions/3.1.10": {
@@ -7298,26 +7333,35 @@
       ]
     },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "Microsoft.Extensions.Logging.Abstractions/3.1.10": {
       "sha512": "bKHbgzbGsPZbEaExRaJqBz3WQ1GfhMttM23e1nivLJ8HbA3Ad526mW2G2K350q3Dc3HG83I5W8uSZWG4Rv4IpA==",
       "type": "package",
       "path": "microsoft.extensions.logging.abstractions/3.1.10",
 =======
+=======
+>>>>>>> Stashed changes
     "System.Text.Encoding.CodePages/6.0.0": {
       "sha512": "ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
       "type": "package",
       "path": "system.text.encoding.codepages/6.0.0",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
         "microsoft.extensions.logging.abstractions.3.1.10.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec"
 =======
+=======
+>>>>>>> Stashed changes
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
@@ -7347,6 +7391,9 @@
         "system.text.encoding.codepages.6.0.0.nupkg.sha512",
         "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       ]
     },
@@ -7682,6 +7729,9 @@
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.21",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
       "System.Text.Encoding.CodePages >= 6.0.0"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     ]
   },
@@ -7753,6 +7803,14 @@
             "target": "Package",
 <<<<<<< Updated upstream
             "version": "[3.1.10, )"
+=======
+            "version": "[3.1.5, )"
+          },
+          "System.Text.Encoding.CodePages": {
+            "target": "Package",
+<<<<<<< Updated upstream
+            "version": "[6.0.0, )"
+>>>>>>> Stashed changes
 =======
             "version": "[3.1.5, )"
           },

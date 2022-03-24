@@ -1,6 +1,7 @@
 {
   "version": 2,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "dgSpecHash": "5nmAM7E5ytWCa03WeEPhMKEhByYg0LExOpatP17yFtpNnFeZWNyALmFrjVbbsptgy+HWElKFUO+UcT2I4Z2bmA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ukwim\\Documents\\GitHub\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj",
@@ -12,6 +13,12 @@
   "success": true,
   "projectFilePath": "C:\\Users\\ukwim\\Documents\\GitHub\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj",
   "expectedPackageFiles": [
+=======
+  "dgSpecHash": "26sXpNpUYcn+whlhlv9ZZ6Y0kLs/efEmniEunrFfIWsJNXj9cEwNXC2nT2KHN3mppzOIqWP33morIECtzi6EyA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ukwim\\Documents\\GitHub\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj",
+  "expectedPackageFiles": [
+>>>>>>> Stashed changes
     "C:\\Users\\ukwim\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
     "C:\\Users\\ukwim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.21\\microsoft.aspnetcore.cryptography.internal.3.1.21.nupkg.sha512",
     "C:\\Users\\ukwim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.21\\microsoft.aspnetcore.cryptography.keyderivation.3.1.21.nupkg.sha512",
