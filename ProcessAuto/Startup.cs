@@ -66,6 +66,8 @@ namespace ProcessAuto
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+
         }
     }
 }

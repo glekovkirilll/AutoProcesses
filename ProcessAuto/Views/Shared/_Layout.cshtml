@@ -25,7 +25,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+<<<<<<< Updated upstream
                         @if(User.IsInRole("ADMIN")){
+=======
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Classes" asp-action="Index">SMTH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Excel" asp-action="Index">Excel</a>
+                        </li>
+                        @if(User.IsInRole("Admin")){
+>>>>>>> Stashed changes
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Roles</a>
                             </li>

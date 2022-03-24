@@ -7,14 +7,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using ProcessAuto.Models;
 using ProcessAuto.Models.ViewModels;
+using ProcessAuto.Areas.Identity.Data;
 
 namespace ProcessAuto.Controllers
 {
     public class RolesController : Controller
     {
         RoleManager<IdentityRole> _roleManager;
-        UserManager<IdentityUser> _userManager;
-        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<IdentityUser> userManager)
+        UserManager<ProcessAutoUser> _userManager;
+        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<ProcessAutoUser> userManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
@@ -59,7 +60,7 @@ namespace ProcessAuto.Controllers
         public async Task<IActionResult> Edit(string userId)
         {
             // получаем пользователя
-            IdentityUser user = await _userManager.FindByIdAsync(userId);
+            ProcessAutoUser user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
                 // получем список ролей пользователя
@@ -81,7 +82,7 @@ namespace ProcessAuto.Controllers
         public async Task<IActionResult> Edit(string userId, List<string> roles)
         {
             // получаем пользователя
-            IdentityUser user = await _userManager.FindByIdAsync(userId);
+            ProcessAutoUser user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
                 // получем список ролей пользователя
