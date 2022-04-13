@@ -14,6 +14,7 @@ namespace ProcessAuto.Controllers
     {
         private readonly UserManager<PAUser> _userManager;
         private readonly SignInManager<PAUser> _signInManager;
+        List<Student> students = new List<Student>();
 
         public StudentsRegistrationController(UserManager<PAUser> userManager, SignInManager<PAUser> signInManager)
         {
@@ -32,7 +33,7 @@ namespace ProcessAuto.Controllers
         [HttpPost]
         public IActionResult Index(IFormCollection form)
         {
-            List<Student> students = new List<Student>();
+
             var fileName = "./Users.xlsx";
             // For .net core, the next line requires the NuGet package, 
             // System.Text.Encoding.CodePages
@@ -57,19 +58,23 @@ namespace ProcessAuto.Controllers
             }
             return View(students);
         }
-
-        // GET: StudentsRegistrationController/Details/5
-        [HttpPost]
-        public async Task<IActionResult> Register(List<Student> students)
+        [HttpGet]
+        public async Task<IActionResult> Register()
         {
-            foreach (var Student in students) 
+            return View(students);
+        }
+        //GET: StudentsRegistrationController/Details/5
+        [HttpPost]
+        public async Task<IActionResult> Register(List<Student> studentsToAdd)
+        {
+            foreach (var Student in studentsToAdd) 
             { 
                 PAUser user = new PAUser { Surname = Student.Surname, Name = Student.Name, MiddleName = Student.MiddleName, Email = Student.Email};
                 var result = await _userManager.CreateAsync(user, Student.Password);
             }
 
 
-            return View();
+            return View(students);
         }
 
         // GET: StudentsRegistrationController/Create

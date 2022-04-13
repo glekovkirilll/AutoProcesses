@@ -1,19 +1,14 @@
 ﻿@using ProcessAuto.Models
 @model IEnumerable<Student>
 @{
-    Layout = null;
-}
-<!DOCTYPE html>
+    Layout = null;}
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Users</title>
 </head>
 <body>
-    @using (Html.BeginForm("Index", "StudentsRegistration", FormMethod.Post))
-    {
-      <input type="submit" value="Get Users" />
-    }
     @using (Html.BeginForm("Register", "StudentsRegistration", FormMethod.Post))
     {
       <input type="submit" value="Register" />
