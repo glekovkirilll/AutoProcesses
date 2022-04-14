@@ -61,6 +61,10 @@ namespace ProcessAuto.Controllers
             {
                 var user = new PAUser { UserName = Student.Email, Email = Student.Email, EmailConfirmed = true };
                 var result = await _userManager.CreateAsync(user, Student.Password);
+                if(result.Succeeded)
+                {
+                    IdentityResult roleresult = await _userManager.AddToRoleAsync(user, "STUDENT");
+                }
             }
             return View(students);
         }
