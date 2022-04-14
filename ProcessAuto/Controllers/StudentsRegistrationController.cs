@@ -59,7 +59,13 @@ namespace ProcessAuto.Controllers
 
             foreach (var Student in students)
             {
-                var user = new PAUser { UserName = Student.Email, Email = Student.Email, EmailConfirmed = true };
+                var user = new PAUser { UserName = Student.Email, 
+                                        Email = Student.Email, 
+                                        EmailConfirmed = true, 
+                                        Name = Student.Name, 
+                                        Surname = Student.Surname, 
+                                        MiddleName = Student.MiddleName };
+
                 var result = await _userManager.CreateAsync(user, Student.Password);
                 if(result.Succeeded)
                 {
