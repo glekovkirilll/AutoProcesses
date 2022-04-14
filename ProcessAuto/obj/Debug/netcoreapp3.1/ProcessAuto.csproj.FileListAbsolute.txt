@@ -394,3 +394,5 @@ C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\bin\Debug\netcoreapp3.1\run
 C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\StudentsRegistration\Index.cshtml.g.cs
 C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
 C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\StudentsRegistration\Register.cshtml.g.cs
+C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\Info.cshtml.g.cs

@@ -31,7 +31,7 @@ namespace ProcessAuto.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(IFormCollection form)
+        public async Task<IActionResult> IndexAsync(IFormCollection form)
         {
 
             var fileName = "./Users.xlsx";
@@ -56,26 +56,32 @@ namespace ProcessAuto.Controllers
                     }
                 }
             }
-            return View(students);
-        }
-        [HttpGet]
-        public async Task<IActionResult> Register()
-        {
-            return View(students);
-        }
-        //GET: StudentsRegistrationController/Details/5
-        [HttpPost]
-        public async Task<IActionResult> Register(List<Student> studentsToAdd)
-        {
-            foreach (var Student in studentsToAdd) 
-            { 
-                PAUser user = new PAUser { Surname = Student.Surname, Name = Student.Name, MiddleName = Student.MiddleName, Email = Student.Email};
+
+            foreach (var Student in students)
+            {
+                var user = new PAUser { UserName = Student.Email, Email = Student.Email, EmailConfirmed = true };
                 var result = await _userManager.CreateAsync(user, Student.Password);
             }
-
-
             return View(students);
         }
+        //[HttpGet]
+        //public async Task<IActionResult> Register()
+        //{
+        //    return View(students);
+        //}
+        ////GET: StudentsRegistrationController/Details/5
+        //[HttpPost]
+        //public async Task<IActionResult> Register(List<Student> studentsToAdd)
+        //{
+        //    foreach (var Student in studentsToAdd) 
+        //    { 
+        //        PAUser user = new PAUser { Surname = Student.Surname, Name = Student.Name, MiddleName = Student.MiddleName, Email = Student.Email};
+        //        var result = await _userManager.CreateAsync(user, Student.Password);
+        //    }
+
+
+        //    return View(students);
+        //}
 
         // GET: StudentsRegistrationController/Create
         public ActionResult Create()
