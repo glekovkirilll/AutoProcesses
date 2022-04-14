@@ -34,7 +34,7 @@ namespace ProcessAuto.Controllers
         public async Task<IActionResult> IndexAsync(IFormCollection form)
         {
 
-            var fileName = "./Users.xlsx";
+            var fileName = "./Students.xlsx";
             // For .net core, the next line requires the NuGet package, 
             // System.Text.Encoding.CodePages
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);

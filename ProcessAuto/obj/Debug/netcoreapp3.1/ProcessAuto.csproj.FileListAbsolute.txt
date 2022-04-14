@@ -393,7 +393,6 @@ C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\bin\Debug\netcoreapp3.1\Sys
 C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
 C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\StudentsRegistration\Index.cshtml.g.cs
 C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
-C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\StudentsRegistration\Register.cshtml.g.cs
 C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
 C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\Info.cshtml.g.cs
-C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\StudentsRegistration\Index3.cshtml.g.cs
+C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\CompaniesRegistration\Index.cshtml.g.cs

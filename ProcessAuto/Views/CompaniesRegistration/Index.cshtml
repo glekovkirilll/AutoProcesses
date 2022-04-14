@@ -1,0 +1,26 @@
+﻿@using ProcessAuto.Models
+@model IEnumerable<Company>    
+   
+    
+        <table class="table">
+
+            <tr>                
+                <th>Name</th>                
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+            @foreach (Company user in Model)
+            {
+                <tr>                    
+                    <td>@user.Name</td>                    
+                    <td>@user.Email</td>
+                    <td>@user.Password</td>
+                </tr>
+            }
+        </table>
+    
+
+    @using (Html.BeginForm("Index", "CompaniesRegistration", FormMethod.Post))
+    {
+      <input class="btn btn-outline-primary mt-3" type="submit" value="Добавить компании"/>
+    }
