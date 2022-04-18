@@ -1,0 +1,46 @@
+﻿@model ProcessAuto.Models.ViewModels.ResumeViewModel
+
+@{
+    ViewData["Title"] = "Resume";
+}
+@*<h1>@ViewData["Title"]</h1>
+
+<p>This page will be avaliable for logged user and will let them edit their resume.</p>*@
+
+<h4>@ViewData["Title"]</h4>
+<dl>
+
+  <dt>About Yourself: </dt>
+    <dd>@Model.AboutYourself</dd>
+
+  <dt>Stack: </dt>
+    <dd>@Model.Stack</dd>
+
+  <dt>Working Experience: </dt>
+    <dd>@Model.WorkingExperience</dd>
+
+  <dt>Programming Languages: </dt>
+    <dd>@Model.WorkingExperience</dd>
+
+  <dt>Hobbies: </dt>
+    <dd>@Model.Hobbies</dd>
+
+  <dt>Hobbies: </dt>
+    <dd>@ViewBag.Student</dd>
+    
+</dl>
+
+<a class="btn btn-outline-danger" asp-area="" asp-controller="Resume" asp-action="Edit">Roles</a>
+
+@*@using(Html.BeginForm("Buy", "Resume", FormMethod.Post))
+{
+    <input type="hidden" value="@ViewBag.BookId" name="BookId" />
+    <table>
+        <tr><td><p>Введите свое имя </p></td>
+            <td><input type="text" name="Person" /> </td></tr>
+        <tr><td><p>Введите адрес :</p></td>
+            <td><input type="text" name="Address" /> </td></tr>
+        <tr><td><input type="submit" value="Отправить" /> </td>
+                <td></td></tr>
+    </table>
+}*@

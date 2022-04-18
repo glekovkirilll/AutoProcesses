@@ -6,6 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\Migrations\20220411090149_AddResumes.cs" />
+    <Compile Remove="Data\Migrations\20220411090149_AddResumes.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220411090545_ResumesKeyAdded.cs" />
+    <Compile Remove="Data\Migrations\20220411090545_ResumesKeyAdded.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220411090748_ResumesFix.cs" />
+    <Compile Remove="Data\Migrations\20220411090748_ResumesFix.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220411091122_ResumesFix_2.cs" />
+    <Compile Remove="Data\Migrations\20220411091122_ResumesFix_2.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220411091438_ResumesAdded.cs" />
+    <Compile Remove="Data\Migrations\20220411091438_ResumesAdded.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
   </ItemGroup>
 

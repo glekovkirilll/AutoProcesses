@@ -224,6 +224,37 @@ namespace ProcessAuto.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("ProcessAuto.Models.Resume", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("AboutYourself")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Hobbies")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProgrammingLanguages")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Stack")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("WorkingExperience")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("studentId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("studentId");
+
+                    b.ToTable("Resumes");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -273,6 +304,13 @@ namespace ProcessAuto.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ProcessAuto.Models.Resume", b =>
+                {
+                    b.HasOne("ProcessAuto.Areas.Identity.Data.PAUser", "student")
+                        .WithMany("Resumes")
+                        .HasForeignKey("studentId");
                 });
 #pragma warning restore 612, 618
         }

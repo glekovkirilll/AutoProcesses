@@ -1,0 +1,28 @@
+﻿@model ProcessAuto.Models.ViewModels.ResumeViewModel
+
+@{
+    ViewData["Title"] = "Edit resume";
+}
+
+<h4>@ViewData["Title"]</h4>
+
+@using(Html.BeginForm())
+{
+    @*<input type="hidden" value="@ViewBag.BookId" name="BookId" />*@
+    <table>
+        <tr><td><p> About yourself </p></td>
+            <td><input asp-for="AboutYourself" type="text" name="AboutYourself" value="@Model.AboutYourself"/> </td></tr>
+        <tr><td><p> Programming Languages </p></td>
+            <td><input asp-for="ProgrammingLanguages" type="text" name="ProgrammingLanguages" value="@Model.ProgrammingLanguages"/> </td></tr>
+        <tr><td><p> Stack </p></td>
+            <td><input asp-for="Stack" type="text" name="Stack" value="@Model.Stack"/> </td></tr>
+        <tr><td><p> Experience </p></td>
+            <td><input asp-for="WorkingExperience" type="text" name="WorkingExperience" value="@Model.WorkingExperience"/> </td></tr>
+        <tr><td><p> Hobbies </p></td>
+            <td><input asp-for="Hobbies" type="text" name="Hobbies" value="@Model.Hobbies"/> </td></tr>       
+
+        <div class="form-group">
+                <input type="submit" value="Save changes" class="btn btn-default" />
+            </div>
+    </table>
+}

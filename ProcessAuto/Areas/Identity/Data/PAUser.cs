@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using ProcessAuto.Models;
 using System;
+using System.Collections.Generic;
 
 namespace ProcessAuto.Areas.Identity.Data
 {
@@ -13,6 +15,8 @@ namespace ProcessAuto.Areas.Identity.Data
         public string MiddleName { get; set; }
         [PersonalData]
         public DateTime DateOfBirth { get; set; }
+
+        public ICollection<Resume> Resumes { get; set; }
 
     }
 }
