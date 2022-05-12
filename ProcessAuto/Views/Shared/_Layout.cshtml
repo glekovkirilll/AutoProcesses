@@ -32,6 +32,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="HRRegistration" asp-action="Index">HR's</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Companies" asp-action="Index">Companies</a>
+                        </li>
                         @if (SignInManager.IsSignedIn(User))
                         {
                             <li class="nav-item">
@@ -44,7 +47,7 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Vacancies" asp-action="Index">Vacancies</a>
                             </li>
                         }
-                        @if(User.IsInRole("ADMIN")){
+                        @if(User.IsInRole("Admin")){
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Roles</a>
                             </li>

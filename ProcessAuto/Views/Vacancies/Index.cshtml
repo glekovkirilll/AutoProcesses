@@ -10,6 +10,7 @@
 <p>This page will be avaliable for logged user and will let them edit their resume.</p>*@
 
 <h4>@ViewData["Title"]</h4>
+<a class="btn btn-btn-outline-success" asp-area="" asp-controller="Vacancies" asp-action="Create">Create</a>
 
 @{
     IEnumerable<VacancyViewModel> vacancies = ViewData["Vacancies"] as IEnumerable<VacancyViewModel>; 
@@ -20,7 +21,7 @@
 @foreach (VacancyViewModel vacancy in vacancies)
 {
  
-  <a href="Vacancies/@vacancy.Id" class="list-group-item list-group-item-action flex-column align-items-start">    
+  <a href="./@vacancy.Id" class="list-group-item list-group-item-action flex-column align-items-start">    
     <p class="mb-1">Company: @vacancy.Company</p>    
     <p class="mb-1">Stack: @vacancy.Stack</p>   
     <p class="mb-1">Position: @vacancy.Position</p>   
