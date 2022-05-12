@@ -26,7 +26,10 @@ namespace ProcessAuto.Controllers
         {
             var email = User.Identity.Name;
             var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == email);
-            ViewBag.User = ((CompanyNames)currentUser.Company).ToString();
+            if (currentUser.Company != null)
+            {
+                ViewBag.User = ((CompanyNames)currentUser.Company).ToString();
+            }
             return View(await _context.Companies.ToListAsync());
         }
 
@@ -99,7 +102,7 @@ namespace ProcessAuto.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Info,LinkToWebsite")] CompaniesViewModel company)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Info,LinkToWebsite")] Company company)
         {
             if (id != company.Id)
             {

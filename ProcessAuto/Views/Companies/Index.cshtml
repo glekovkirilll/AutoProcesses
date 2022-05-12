@@ -39,7 +39,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.LinkToWebsite)
             </td>
-            @if(User.IsInRole("Company") && ViewBag.User == item.Name){
+            @if((User.IsInRole("Company") && ViewBag.User == item.Name) || User.IsInRole("Admin")){
             <td>
                 
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
