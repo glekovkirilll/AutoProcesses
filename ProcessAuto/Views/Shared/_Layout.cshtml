@@ -35,6 +35,12 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Resume" asp-action="Index">Resume</a>
                             </li>
                         }
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Vacancies" asp-action="Index">Vacancies</a>
+                            </li>
+                        }
                         @if(User.IsInRole("ADMIN")){
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Roles</a>
