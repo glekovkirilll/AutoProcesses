@@ -4,19 +4,21 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ProcessAuto.Areas.Identity.Data;
 using ProcessAuto.Models;
+using ProcessAuto.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
 namespace ProcessAuto.Controllers
 {
-    public class CompaniesRegistrationController : Controller
+    public class HRRegistrationController : Controller
     {
         private readonly UserManager<PAUser> _userManager;
         private readonly SignInManager<PAUser> _signInManager;
-        List<Company> companies = new List<Company>();
+        List<HumanResources> HR = new List<HumanResources>();
 
-        public CompaniesRegistrationController(UserManager<PAUser> userManager, SignInManager<PAUser> signInManager)
+        public HRRegistrationController(UserManager<PAUser> userManager, SignInManager<PAUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -27,7 +29,7 @@ namespace ProcessAuto.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new List<Company>());
+            return View(new List<HumanResources>());
         }
 
         [HttpPost]
@@ -45,30 +47,37 @@ namespace ProcessAuto.Controllers
 
                     while (reader.Read()) //Each row of the file
                     {
-                        companies.Add(new Company
-                        {                           
-                            Name = reader.GetValue(0).ToString(),                            
-                            Email = reader.GetValue(1).ToString(),
-                            Password = reader.GetValue(2).ToString()
+                        HR.Add(new HumanResources
+                        {
+                            Surname = reader.GetValue(0).ToString(),
+                            Name = reader.GetValue(1).ToString(),                          
+                            MiddleName = reader.GetValue(2).ToString(),
+                            Email = reader.GetValue(3).ToString(),
+                            Password = reader.GetValue(4).ToString(),
+                            Company = Int32.Parse(reader.GetValue(5).ToString())
+                            
                         });
                     }
                 }
             }
 
-            foreach (var Student in companies)
+            foreach (var hr in HR)
             {
-                var user = new PAUser { UserName = Student.Email, 
-                                        Email = Student.Email, 
+                var user = new PAUser { UserName = hr.Email, 
+                                        Email = hr.Email,                                         
                                         EmailConfirmed = true, 
-                                        Name = Student.Name};
+                                        Company = hr.Company,
+                                        Name = hr.Name,
+                                        Surname = hr.Surname,
+                                        MiddleName = hr.MiddleName};
 
-                var result = await _userManager.CreateAsync(user, Student.Password);
+                var result = await _userManager.CreateAsync(user, hr.Password);
                 if(result.Succeeded)
                 {
                     IdentityResult roleresult = await _userManager.AddToRoleAsync(user, "COMPANY");
                 }
             }
-            return View(companies);
+            return View(HR);
         }
     }
 }

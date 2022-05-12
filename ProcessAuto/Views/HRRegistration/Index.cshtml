@@ -1,0 +1,33 @@
+﻿@using ProcessAuto.Models
+@using ProcessAuto.Models.Enums
+@model IEnumerable<HumanResources>    
+   
+    
+        <table class="table">
+
+            <tr>                
+                <th>Surname</th>                
+                <th>Name</th>                
+                <th>MiddleName</th>                
+                <th>Email</th>
+                <th>Password</th>
+                <th>Company</th>
+            </tr>
+            @foreach (HumanResources user in Model)
+            {
+                <tr>                    
+                    <td>@user.Surname</td>                    
+                    <td>@user.Name</td>                    
+                    <td>@user.MiddleName</td>                    
+                    <td>@user.Email</td>
+                    <td>@user.Password</td>
+                    <td>@((CompanyNames)user.Company)</td>
+                </tr>
+            }
+        </table>
+    
+
+    @using (Html.BeginForm("Index", "HRRegistration", FormMethod.Post))
+    {
+      <input class="btn btn-outline-primary mt-3" type="submit" value="Добавить HR"/>
+    }

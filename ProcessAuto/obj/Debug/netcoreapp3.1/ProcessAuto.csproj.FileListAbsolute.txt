@@ -595,3 +595,9 @@ C:\Users\uz1mane\source\repos\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\
 C:\Users\uz1mane\source\repos\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\ProcessAuto.genruntimeconfig.cache
 C:\Users\uz1mane\source\repos\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\Resume\Index.cshtml.g.cs
 C:\Users\uz1mane\source\repos\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\Resume\Edit.cshtml.g.cs
+C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\Info.cshtml.g.cs
+C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\Resume\Edit.cshtml.g.cs
+C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\Resume\Index.cshtml.g.cs
+C:\Users\ukwim\Documents\GitHub\Projects\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\HRRegistration\Index.cshtml.g.cs

@@ -18,5 +18,7 @@ namespace ProcessAuto.Areas.Identity.Data
 
         public ICollection<Resume> Resumes { get; set; }
 
+        public Int32? Company { get; set; }
+
     }
 }
