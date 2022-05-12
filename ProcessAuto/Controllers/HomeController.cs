@@ -22,7 +22,7 @@ namespace ProcessAuto.Controllers
             _logger = logger;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var userId = _userManager.GetUserId(HttpContext.User);
             if (userId == null)

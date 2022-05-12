@@ -14,7 +14,7 @@ namespace ProcessAuto.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.23");
+                .HasAnnotation("ProductVersion", "3.1.24");
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -227,6 +227,26 @@ namespace ProcessAuto.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("ProcessAuto.Models.Company", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Info")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LinkToWebsite")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Companies");
+                });
+
             modelBuilder.Entity("ProcessAuto.Models.Resume", b =>
                 {
                     b.Property<int>("Id")
@@ -256,6 +276,29 @@ namespace ProcessAuto.Data.Migrations
                     b.HasIndex("studentId");
 
                     b.ToTable("Resumes");
+                });
+
+            modelBuilder.Entity("ProcessAuto.Models.Vacancy", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Company")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Position")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Slots")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Stack")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vacancies");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

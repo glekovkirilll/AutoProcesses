@@ -1,0 +1,48 @@
+﻿@using ProcessAuto.Models.ViewModels
+@using System.Collections
+@model ProcessAuto.Models.ViewModels.VacancyViewModel
+
+@{
+    ViewData["Title"] = "Vacancies";
+}
+@*<h1>@ViewData["Title"]</h1>
+
+<p>This page will be avaliable for logged user and will let them edit their resume.</p>*@
+
+<h4>@ViewData["Title"]</h4>
+<a class="btn btn-btn-outline-success" asp-area="" asp-controller="Vacancies" asp-action="Create">Create</a>
+
+@{
+    IEnumerable<VacancyViewModel> vacancies = ViewData["Vacancies"] as IEnumerable<VacancyViewModel>; 
+}
+
+<div class="list-group">
+
+@foreach (VacancyViewModel vacancy in vacancies)
+{
+ 
+  <a href="./@vacancy.Id" class="list-group-item list-group-item-action flex-column align-items-start">    
+    <p class="mb-1">Company: @vacancy.Company</p>    
+    <p class="mb-1">Stack: @vacancy.Stack</p>   
+    <p class="mb-1">Position: @vacancy.Position</p>   
+    <p class="mb-1">Slots: @vacancy.Slots</p>       
+  </a>
+
+}    
+
+</div>
+
+@*<a class="btn btn-outline-danger" asp-area="" asp-controller="Vacancies" asp-action="Edit">Roles</a>*@
+
+@*@using(Html.BeginForm("Buy", "Resume", FormMethod.Post))
+{
+    <input type="hidden" value="@ViewBag.BookId" name="BookId" />
+    <table>
+        <tr><td><p>Введите свое имя </p></td>
+            <td><input type="text" name="Person" /> </td></tr>
+        <tr><td><p>Введите адрес :</p></td>
+            <td><input type="text" name="Address" /> </td></tr>
+        <tr><td><input type="submit" value="Отправить" /> </td>
+                <td></td></tr>
+    </table>
+}*@
