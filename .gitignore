@@ -10,3 +10,7 @@ ProcessAuto/bin/Debug/netcoreapp3.1/ProcessAuto.Views.dll
 ProcessAuto/bin/Debug/netcoreapp3.1/ProcessAuto.Views.pdb
 ProcessAuto/obj/Debug/netcoreapp3.1/ProcessAuto.Views.dll
 ProcessAuto/obj/Debug/netcoreapp3.1/ProcessAuto.Views.pdb
+ProcessAuto/.vs/ProcessAuto/v17/.suo
+*.v1
+*.v2
+ProcessAuto/.vs/ProcessAuto/DesignTimeBuild/.dtbcache.v2
