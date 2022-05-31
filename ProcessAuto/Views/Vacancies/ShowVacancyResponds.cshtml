@@ -1,0 +1,32 @@
+﻿@using ProcessAuto.Models.ViewModels
+@using System.Collections
+
+@{
+    ViewData["Title"] = "Vacancy Responds";
+}
+@*<h1>@ViewData["Title"]</h1>
+
+<p>This page will be avaliable for logged user and will let them edit their resume.</p>*@
+
+@*<h4>@ViewData["Title"]</h4>*@
+
+@{
+    IEnumerable<VacancyRespond> responds = ViewData["Responds"] as IEnumerable<VacancyRespond>; 
+}
+
+<div class="list-group">
+
+@foreach (VacancyRespond r in responds)
+{
+
+    <h3>Vacancy of user @r.Email</h3>
+   
+    <p class="mb-1">About Yourself: @r.AboutYourself</p>    
+    <p class="mb-1">Stack: @r.Stack</p>   
+    <p class="mb-1">Programming Languages: @r.ProgrammingLanguages</p>   
+    <p class="mb-1">Hobbies: @r.Hobbies</p>       
+    <p class="mb-1">Working Experience: @r.WorkingExperience</p>       
+
+}    
+
+</div>

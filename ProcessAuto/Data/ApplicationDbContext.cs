@@ -14,6 +14,8 @@ namespace ProcessAuto.Data
         public DbSet<Vacancy> Vacancies { get; set; }
         public DbSet<Company> Companies { get; set; }
 
+        public DbSet<VacancyUser> Responds { get; set; }
+
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

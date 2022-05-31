@@ -301,6 +301,27 @@ namespace ProcessAuto.Data.Migrations
                     b.ToTable("Vacancies");
                 });
 
+            modelBuilder.Entity("ProcessAuto.Models.VacancyUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("studentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("vacancyId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("studentId");
+
+                    b.HasIndex("vacancyId");
+
+                    b.ToTable("Responds");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -357,6 +378,17 @@ namespace ProcessAuto.Data.Migrations
                     b.HasOne("ProcessAuto.Areas.Identity.Data.PAUser", "student")
                         .WithMany("Resumes")
                         .HasForeignKey("studentId");
+                });
+
+            modelBuilder.Entity("ProcessAuto.Models.VacancyUser", b =>
+                {
+                    b.HasOne("ProcessAuto.Areas.Identity.Data.PAUser", "student")
+                        .WithMany()
+                        .HasForeignKey("studentId");
+
+                    b.HasOne("ProcessAuto.Models.Vacancy", "vacancy")
+                        .WithMany()
+                        .HasForeignKey("vacancyId");
                 });
 #pragma warning restore 612, 618
         }

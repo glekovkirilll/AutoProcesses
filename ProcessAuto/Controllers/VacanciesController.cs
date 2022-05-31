@@ -6,10 +6,11 @@ using ProcessAuto.Models.Enums;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace ProcessAuto.Controllers
 {
-    [Route("Vacancies")]
+    //[Route("Vacancies")]
     public class VacanciesController : Controller
     {
 
@@ -19,7 +20,9 @@ namespace ProcessAuto.Controllers
         {
             _context = context;            
         }
-        [HttpGet("Index")]
+
+        [HttpGet]
+        [Route("Vacancies")]
         public IActionResult Index()
         {
             //var student = await this._context.Users.SingleOrDefaultAsync(x => x.Id == studentId);
@@ -48,7 +51,7 @@ namespace ProcessAuto.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Route("Create")]
+        [Route("Vacancies/Create")]
 
         public async Task<IActionResult> Create(VacancyViewModel model)
         {
@@ -72,9 +75,9 @@ namespace ProcessAuto.Controllers
             return this.View(model);
         }
 
-        [HttpGet]
-        [Route(("{userId}"))]
-        public IActionResult ShowSomeVacancy(int userId)
+        [Route("{userId}")]
+        [HttpGet("Vacancies/{userId}")]        
+        public async Task<IActionResult> ShowSomeVacancy(int userId)
         {
             //var student = await this._context.Users.SingleOrDefaultAsync(x => x.Id == studentId);
             var vacancy = _context.Vacancies.FirstOrDefault(x => x.Id == userId);
@@ -87,7 +90,70 @@ namespace ProcessAuto.Controllers
             };
 
             this.ViewData["Vacancy"] = vacancyViewModel;
+            this.ViewData["VacancyId"] = userId;
+
+            var student = await _context.Users.FirstOrDefaultAsync(x => x.Email == User.Identity.Name);
+            var checkIfAlreadyResponded = await _context.Responds.FirstOrDefaultAsync(x => x.vacancy == vacancy && x.student == student);
+
+            if (checkIfAlreadyResponded == default)
+            {
+                this.ViewData["checkIfAlreadyResponded"] = 0;
+            }
+            else
+            {
+                this.ViewData["checkIfAlreadyResponded"] = 1;
+            }
+
             this.ViewBag.Id = vacancy.Id;
+            return View();
+        }
+
+        [HttpGet("{vacId}")]
+        [Route("Vacancies/RespondOnVacancy/{vacId}")]
+        public async Task<IActionResult> RespondOnVacancy(int vacId)
+        {
+            var curUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == User.Identity.Name);
+            var vacancyId = vacId;
+            var respond = new VacancyUser
+            {
+                student = curUser,
+                vacancy = await _context.Vacancies.FirstOrDefaultAsync(x => x.Id == vacancyId)
+            };
+            _context.Responds.Add(respond);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("ShowSomeVacancy", "Vacancies", new { userId = vacancyId });
+        }
+
+        [HttpGet("{vacId}")]
+        [Route("Vacancies/ShowVacancyResponds/{vacId}")]
+        public async Task<IActionResult> ShowVacancyResponds(int vacId)
+        {
+            var curVacancy = await _context.Vacancies.FirstOrDefaultAsync(x => x.Id == vacId);
+            var responders = _context.Responds.Where(x => x.vacancy == curVacancy).Include(y => y.student);
+
+            List<VacancyRespond> responds = new List<VacancyRespond>();
+
+
+            foreach (var r in responders)
+            {
+                var curStudent = r.student;
+                var curStudentResume = await _context.Resumes.FirstOrDefaultAsync(x => x.student == curStudent);
+
+                responds.Add(new VacancyRespond
+                {
+                    Email = curStudent.Email,
+
+                    WorkingExperience = curStudentResume.WorkingExperience,
+                    AboutYourself = curStudentResume.AboutYourself,
+                    Stack = curStudentResume.Stack,
+                    ProgrammingLanguages = curStudentResume.ProgrammingLanguages,
+                    Hobbies = curStudentResume.Hobbies
+                });
+            }
+
+            this.ViewData["Responds"] = responds;
+            this.ViewData["VacId"] = vacId;
+
             return View();
         }
 

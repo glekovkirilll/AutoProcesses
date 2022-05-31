@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ProcessAuto.Data;
 using ProcessAuto.Models.ViewModels;
@@ -7,6 +8,7 @@ using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using ProcessAuto.Models;
 
 namespace ProcessAuto.Controllers
 {
@@ -30,32 +32,42 @@ namespace ProcessAuto.Controllers
             //var student = await this._context.Users.SingleOrDefaultAsync(x => x.Id == studentId);
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var currentUserResume = await _context.Resumes.FirstOrDefaultAsync(x => x.student.Id == userId);
-            this.ViewBag.Student = User.Identity.Name;
+            var email = User.Identity.Name;
+            if (currentUserResume == default)
+            {
+                CreateResumeInDB(email);
+                currentUserResume = await _context.Resumes.FirstOrDefaultAsync(x => x.student.Id == userId);
+            }
             if (currentUserResume != default)
             {
                 ResumeViewModel model = new ResumeViewModel
                 {
-                    /*AboutYourself = "kek",
-                    Stack = "kek",
-                    Hobbies = "kek",
-                    WorkingExperience = "kek",
-                    ProgrammingLanguages = "kek"*/
                     AboutYourself = currentUserResume.AboutYourself,
                     Stack = currentUserResume.Stack,
                     Hobbies = currentUserResume.Hobbies,
                     WorkingExperience = currentUserResume.WorkingExperience,
                     ProgrammingLanguages = currentUserResume.ProgrammingLanguages
-
-                    
                 };
                 return View(model);
             }
-            else return StatusCode(404, "Not Found");            
+            else return NotFound("Not Found");
         }
 
-        public IActionResult Test()
+        public async Task CreateResumeInDB(string email)
         {
-            return StatusCode(200, "It is working!");
+            var curUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == email);
+            //var id = curUser.Id;
+            _context.Resumes.Add(new Resume
+            {
+                student = curUser,
+                Stack = null,
+                ProgrammingLanguages = null,
+                WorkingExperience = null,
+                AboutYourself = null,
+                Hobbies = null,
+            });
+            await _context.SaveChangesAsync();
+            return;
         }
 
         [HttpGet]
@@ -77,20 +89,20 @@ namespace ProcessAuto.Controllers
                 return View(model);
             }
             else return StatusCode(404, "NotFound");
-                /*var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                var currentUserResume = await _context.Resumes.FirstOrDefaultAsync(x => x.student.Id == userId);
-                if (currentUserResume != default)
-                {
-                    currentUserResume.WorkingExperience = "kek";
-                    currentUserResume.ProgrammingLanguages = "kek";
-                    currentUserResume.Hobbies = "kek";
-                    currentUserResume.Stack = "kek";
-                    currentUserResume.AboutYourself = "kek";
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction("Index");
-                }
-                else return StatusCode(404, "Not found");*/
+            /*var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var currentUserResume = await _context.Resumes.FirstOrDefaultAsync(x => x.student.Id == userId);
+            if (currentUserResume != default)
+            {
+                currentUserResume.WorkingExperience = "kek";
+                currentUserResume.ProgrammingLanguages = "kek";
+                currentUserResume.Hobbies = "kek";
+                currentUserResume.Stack = "kek";
+                currentUserResume.AboutYourself = "kek";
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
             }
+            else return StatusCode(404, "Not found");*/
+        }
 
         [HttpPost]
         [Authorize]
@@ -106,7 +118,7 @@ namespace ProcessAuto.Controllers
                 currentUserResume.Stack = model.Stack;
                 currentUserResume.AboutYourself = model.AboutYourself;
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index");                
+                return RedirectToAction("Index");
             }
             else return StatusCode(404, "Not found");
         }
