@@ -1,26 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProcessAuto.Data;
-using ProcessAuto.Models.ViewModels;
 using ProcessAuto.Models;
-using ProcessAuto.Models.Enums;
+using ProcessAuto.Models.ViewModels;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 namespace ProcessAuto.Controllers
 {
-    [Route("Vacancies")]
+    //[Route("Vacancies")]
     public class VacanciesController : Controller
     {
 
-        private readonly ApplicationDbContext _context;        
+        private readonly ApplicationDbContext _context;
 
         public VacanciesController(ApplicationDbContext context)
         {
-            _context = context;            
+            _context = context;
         }
-        [HttpGet("Index")]
-        public IActionResult Index()
+
+        [HttpGet]
+        [Route("Vacancies")]
+        public async Task<IActionResult> Index()
         {
             //var student = await this._context.Users.SingleOrDefaultAsync(x => x.Id == studentId);
             var vacancies = _context.Vacancies.Select(x => new VacancyViewModel
@@ -32,52 +33,16 @@ namespace ProcessAuto.Controllers
                 Stack = x.Stack
             });
             this.ViewData["Vacancies"] = vacancies;
-            return View();
+            return View();                        
         }
 
-        // GET: Companies/Create
-        [HttpGet]
-        [Route("Create")]
-        public IActionResult Create()
-        {
-            return this.View();
-        }
-
-        // POST: Docs/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Route("Create")]
-
-        public async Task<IActionResult> Create(VacancyViewModel model)
-        {
-            var Email = User.Identity.Name;
-            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == Email);
-            if (ModelState.IsValid)
-            {
-                var vacancy = new Vacancy
-                {
-                    Company = ((CompanyNames)currentUser.Company).ToString(),
-                    Stack = model.Stack,
-                    Slots = model.Slots,
-                    Position = model.Position
-                };
-
-                this._context.Add(vacancy);
-                await this._context.SaveChangesAsync();
-                return this.RedirectToAction("Index");
-            }
-
-            return this.View(model);
-        }
-
-        [HttpGet]
-        [Route(("{userId}"))]
-        public IActionResult ShowSomeVacancy(int userId)
+        [HttpGet("{userId}")]
+        [Route("Vacancies/{userId}")]
+        public async Task<IActionResult> ShowSomeVacancy(int userId)
         {
             //var student = await this._context.Users.SingleOrDefaultAsync(x => x.Id == studentId);
             var vacancy = _context.Vacancies.FirstOrDefault(x => x.Id == userId);
+            this.ViewData["VacancyId"] = userId;
             var vacancyViewModel = new VacancyViewModel
             {
                 Company = vacancy.Company,
@@ -85,62 +50,38 @@ namespace ProcessAuto.Controllers
                 Slots = vacancy.Slots,
                 Position = vacancy.Position,
             };
-
             this.ViewData["Vacancy"] = vacancyViewModel;
-            this.ViewBag.Id = vacancy.Id;
+
+            var student = await _context.Users.FirstOrDefaultAsync(x => x.Email == User.Identity.Name);
+            var checkIfAlreadyResponded = await _context.Responds.FirstOrDefaultAsync(x => x.vacancy == vacancy && x.student == student);
+
+            if (checkIfAlreadyResponded == default)
+            {
+                this.ViewData["checkIfAlreadyResponded"] = 0;
+            }
+            else
+            {
+                this.ViewData["checkIfAlreadyResponded"] = 1;
+            }
+
             return View();
         }
 
-        [HttpGet]
-        [Route("Delete/{id}")]
-        public async Task<IActionResult> Delete(int? id)
+        [HttpGet("{vacId}")]
+        [Route("Vacancies/RespondOnVacancy/{vacId}")]
+        public async Task<IActionResult> RespondOnVacancy(int vacId)
         {
-            if (id == null)
+            var curUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == User.Identity.Name);
+            var vacancyId = vacId;
+            var respond = new VacancyUser
             {
-                return NotFound();
-            }
-
-            var vacancy = await _context.Vacancies
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (vacancy == null)
-            {
-                return NotFound();
-            }
-
-
-            _context.Vacancies.Remove(vacancy);
+                student = curUser,
+                vacancy = await _context.Vacancies.FirstOrDefaultAsync(x => x.Id == vacancyId)
+            };
+            _context.Responds.Add(respond);
             await _context.SaveChangesAsync();
-            return this.RedirectToAction("Index");
+            return RedirectToAction("ShowSomeVacancy", "Vacancies", new { userId = vacancyId });
         }
-
-        //// GET: Companies/Delete/5
-        //public async Task<IActionResult> Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var company = await _context.Vacancies
-        //        .FirstOrDefaultAsync(m => m.Id == id);
-        //    if (company == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(company);
-        //}
-
-        //// POST: Companies/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> DeleteConfirmed(int id)
-        //{
-        //    var vacancy = await _context.Vacancies.FindAsync(id);
-        //    _context.Vacancies.Remove(vacancy);
-        //    await _context.SaveChangesAsync();
-        //    return RedirectToAction(nameof(Index));
-        //}
     }
     
 }

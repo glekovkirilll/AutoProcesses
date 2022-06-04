@@ -42,11 +42,15 @@
 
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group mr-2" role="group" aria-label="First group">
-    <button class="btn btn-light" asp-area="" asp-controller="" asp-action="">Respond</button>
-  </div>
-  <div class="btn-group mr-2" role="group" aria-label="First group">
-    <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@ViewBag.Id">Delete</a>
-  </div>  
+        @if (ViewData["checkIfAlreadyResponded"].ToString() == "0")
+        {
+            <a class="btn btn-light" asp-area="" asp-controller="Vacancies" asp-action="RespondOnVacancy" asp-route-vacId="@ViewData["VacancyId"]">Respond</a>
+        }
+        else
+        {            
+            <div class="alert alert-warning" role="alert" >Thanks for your respond! We will contact with you soon! </div>
+        }
+    </div>
   <div class="btn-group mr-2" role="group" aria-label="Second group">
     <div class="btn-group-toggle" data-toggle="buttons">
   <label class="btn btn-outline-warning">
