@@ -14,3 +14,5 @@ ProcessAuto/.vs/ProcessAuto/v17/.suo
 *.v1
 *.v2
 ProcessAuto/.vs/ProcessAuto/DesignTimeBuild/.dtbcache.v2
+ProcessAuto/obj/Debug/netcoreapp3.1/ProcessAuto.csproj.AssemblyReference.cache
+ProcessAuto/obj/Debug/netcoreapp3.1/ProcessAuto.GeneratedMSBuildEditorConfig.editorconfig
