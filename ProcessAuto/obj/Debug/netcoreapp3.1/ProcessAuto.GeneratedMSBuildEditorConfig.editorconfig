@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = ProcessAuto
+<<<<<<< Updated upstream
 build_property.ProjectDir = C:\Users\uz1mane\source\repos\AutoProcesses\ProcessAuto\
+=======
+build_property.ProjectDir = C:\Users\uz1mane\source\repos\AutoProcesses-b05dc1cc25f4b1d36402039e67248777215d83a6\ProcessAuto\
+>>>>>>> Stashed changes

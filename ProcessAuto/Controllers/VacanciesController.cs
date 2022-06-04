@@ -7,6 +7,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+<<<<<<< Updated upstream
+=======
+using System;
+>>>>>>> Stashed changes
 
 namespace ProcessAuto.Controllers
 {
@@ -40,7 +44,7 @@ namespace ProcessAuto.Controllers
 
         // GET: Companies/Create
         [HttpGet]
-        [Route("Create")]
+        [Route("Vacancies/Create")]
         public IActionResult Create()
         {
             return this.View();
@@ -54,14 +58,17 @@ namespace ProcessAuto.Controllers
         [Route("Vacancies/Create")]
 
         public async Task<IActionResult> Create(VacancyViewModel model)
-        {
+            {
             var Email = User.Identity.Name;
             var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == Email);
             if (ModelState.IsValid)
             {
+                if (currentUser.Company == null)
+                    return BadRequest("You are not and HR so u can not add vacancies");
                 var vacancy = new Vacancy
                 {
                     Company = ((CompanyNames)currentUser.Company).ToString(),
+                    CompanyId = currentUser.Company.Value,
                     Stack = model.Stack,
                     Slots = model.Slots,
                     Position = model.Position
@@ -84,6 +91,7 @@ namespace ProcessAuto.Controllers
             var vacancyViewModel = new VacancyViewModel
             {
                 Company = vacancy.Company,
+                CompanyId = vacancy.CompanyId,
                 Stack = vacancy.Stack,
                 Slots = vacancy.Slots,
                 Position = vacancy.Position,
