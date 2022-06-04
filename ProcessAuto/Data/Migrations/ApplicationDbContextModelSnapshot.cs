@@ -287,6 +287,9 @@ namespace ProcessAuto.Data.Migrations
                     b.Property<string>("Company")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("CompanyId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Position")
                         .HasColumnType("TEXT");
 

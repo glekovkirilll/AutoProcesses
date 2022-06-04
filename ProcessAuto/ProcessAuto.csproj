@@ -16,6 +16,14 @@
     <Compile Remove="Data\Migrations\20220411091122_ResumesFix_2.Designer.cs" />
     <Compile Remove="Data\Migrations\20220411091438_ResumesAdded.cs" />
     <Compile Remove="Data\Migrations\20220411091438_ResumesAdded.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220602100120_company_id_added.cs" />
+    <Compile Remove="Data\Migrations\20220602100120_company_id_added.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220602100356_company_id_added.cs" />
+    <Compile Remove="Data\Migrations\20220602100356_company_id_added.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220602100431_company_id_added.cs" />
+    <Compile Remove="Data\Migrations\20220602100431_company_id_added.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220602100738_test.cs" />
+    <Compile Remove="Data\Migrations\20220602100738_test.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

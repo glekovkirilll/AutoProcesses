@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "exI1jFt3EOm22q7t0ZMp4B5oUFHDVSLBJ7IFAg0yb6NG+cNv7+5ZEgEOgPM3AH5V736l3oBGxt+ne5bn0XQlMw==",
+  "dgSpecHash": "i2w4xl3k5t94S5hMVLg0PCbQ/FGEmn6OhmDFSBBhmAgf/aaMG3NjZb15sg2Ss3UrWBDFt1H87fvAHjUH4S92rg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj",
+  "projectFilePath": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses-b05dc1cc25f4b1d36402039e67248777215d83a6\\ProcessAuto\\ProcessAuto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uz1mane\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
     "C:\\Users\\uz1mane\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.23\\microsoft.aspnetcore.cryptography.internal.3.1.23.nupkg.sha512",
