@@ -9237,11 +9237,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses-b05dc1cc25f4b1d36402039e67248777215d83a6\\ProcessAuto\\ProcessAuto.csproj",
+      "projectUniqueName": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj",
       "projectName": "ProcessAuto",
-      "projectPath": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses-b05dc1cc25f4b1d36402039e67248777215d83a6\\ProcessAuto\\ProcessAuto.csproj",
+      "projectPath": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj",
       "packagesPath": "C:\\Users\\uz1mane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses-b05dc1cc25f4b1d36402039e67248777215d83a6\\ProcessAuto\\obj\\",
+      "outputPath": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses\\ProcessAuto\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\uz1mane\\AppData\\Roaming\\NuGet\\NuGet.Config",

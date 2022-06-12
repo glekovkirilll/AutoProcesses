@@ -11,22 +11,86 @@
 @*<h4>@ViewData["Title"]</h4>*@
 
 @{
-    IEnumerable<VacancyRespond> responds = ViewData["Responds"] as IEnumerable<VacancyRespond>; 
+    IEnumerable<VacancyRespondViewModel> responds = ViewData["Responds"] as IEnumerable<VacancyRespondViewModel>; 
 }
+
+<div id="modDialog" class="modal fade" >
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
 
 <div class="list-group">
 
-@foreach (VacancyRespond r in responds)
+    <div id="modDialog" class="modal fade" >
+        <div id="dialogContent" class="modal-dialog"></div>
+    </div>
+
+@foreach (VacancyRespondViewModel r in responds)
 {
 
-    <h3>Vacancy of user @r.Email</h3>
+    <h3>Vacancy of user @r.Email. </h3>    
    
     <p class="mb-1">About Yourself: @r.AboutYourself</p>    
     <p class="mb-1">Stack: @r.Stack</p>   
     <p class="mb-1">Programming Languages: @r.ProgrammingLanguages</p>   
     <p class="mb-1">Hobbies: @r.Hobbies</p>       
-    <p class="mb-1">Working Experience: @r.WorkingExperience</p>       
+    <p class="mb-1">Working Experience: @r.WorkingExperience</p>         
+    
+    if (r.RespondStage == VacancyStage.Sent)
+    {
+        <h4>Current stage: Получен отклик от студента</h4>
+
+        <a type="button" class="btn btn-outline-success" asp-controller="VacancyResponds" asp-action="AssignInterview" asp-route-respondId="@r.RespondId" asp-route-vacId="@ViewData["VacId"]">Assign an Interview</a>
+        <a type="button" class="btn btn-outline-danger" asp-controller="VacancyResponds" asp-action="SetStatusNoOffer" asp-route-respondId="@r.RespondId" asp-route-vacId="@ViewData["VacId"]">Not interested</a>
+    }
+    if (r.RespondStage == VacancyStage.InterviewAssigned)
+    {
+         <h4>Current stage: Назначено собеседование. Текущая дата: @r.InterviewDate</h4>
+
+         <a type="button" class="btn btn-outline-success" asp-controller="VacancyResponds" asp-action="AssignInterview" asp-route-respondId="@r.RespondId" asp-route-vacId="@ViewData["VacId"]">Change interview date</a>
+         <a type="button" class="btn btn-outline-danger" asp-controller="VacancyResponds" asp-action="SetStatusOfferSent" asp-route-respondId="@r.RespondId" asp-route-vacId="@ViewData["VacId"]">Send offer</a>
+         <a type="button" class="btn btn-outline-danger" asp-controller="VacancyResponds" asp-action="SetStatusNoOffer" asp-route-respondId="@r.RespondId" asp-route-vacId="@ViewData["VacId"]">No offer</a>
+    }
+    if (r.RespondStage == VacancyStage.NoOffer)
+    {
+        <h4>Current stage: Оффера не будет.</h4>
+    }
+    if (r.RespondStage == VacancyStage.OfferSent)
+    {        
+        if (r.StudentsVerdict == StudentsVerdict.Awaiting)
+        {
+            <h4>Current stage: Проведено собеседование. Студент получил оффер. Ожидается вердикт студента.</h4>
+            <div>No answer yet</div>
+        }
+        if (r.StudentsVerdict == StudentsVerdict.Declined)
+        {
+            <h4>Current stage: Студент отклонил полученный оффер.</h4>
+            <div>Offer was DECLINED by student</div> 
+        }
+        if (r.StudentsVerdict == StudentsVerdict.Accepted) 
+        {
+            <h4>Current stage: Оффер принят студентом.</h4>
+            <div>Offer was accepted by student</div>
+        }
+    }
 
 }    
+
+@section scripts
+{
+    <script type="text/javascript">
+ 
+        $(function () {
+            $.ajaxSetup({ cache: false });
+           $(".respondItem").click(function (e) {
+ 
+                e.preventDefault();
+                $.get(this.href, function (data) {
+                    $('#dialogContent').html(data);
+                    $('#modDialog').modal('show');
+                });
+            });
+        })
+    </script>
+}
 
 </div>

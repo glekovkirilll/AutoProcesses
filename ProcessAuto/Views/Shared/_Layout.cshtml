@@ -63,6 +63,11 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Roles</a>
                             </li>
                         }            
+                        @*@if(User.IsInRole("Student")){*@
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="VacancyResponds" asp-action="ShowSelfResponds">My Responds</a>
+                            </li>
+                        @*}*@        
                     </ul>
                 </div>
             </div>

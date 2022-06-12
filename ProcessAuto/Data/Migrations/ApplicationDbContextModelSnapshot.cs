@@ -310,6 +310,15 @@ namespace ProcessAuto.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateTime>("InterviewDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("StudentsVerdict")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("VacancyStage")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("studentId")
                         .HasColumnType("TEXT");
 

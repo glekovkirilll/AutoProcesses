@@ -1,0 +1,17 @@
+﻿@model ProcessAuto.Models.ViewModels.AssignInverviewViewModel
+ 
+@{
+    ViewBag.Title = "Принять оффер";
+}
+ 
+<h2>Вы уверены, что хотите принять оффер?</h2>
+
+@using(Html.BeginForm())
+{
+
+    <input asp-for="respondId" type="hidden" class="form-control" value="@Model.respondId"/>
+    <input asp-for="vacId" type="hidden" class="form-control" value="@Model.vacId"/>
+
+    <button class="btn btn-success" value="Save changes" type="submit">Принять</button>
+
+}

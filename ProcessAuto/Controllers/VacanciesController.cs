@@ -136,7 +136,7 @@ namespace ProcessAuto.Controllers
             var curVacancy = await _context.Vacancies.FirstOrDefaultAsync(x => x.Id == vacId);
             var responders = _context.Responds.Where(x => x.vacancy == curVacancy).Include(y => y.student);
 
-            List<VacancyRespond> responds = new List<VacancyRespond>();
+            List<VacancyRespondViewModel> responds = new List<VacancyRespondViewModel>();
 
 
             foreach (var r in responders)
@@ -144,7 +144,7 @@ namespace ProcessAuto.Controllers
                 var curStudent = r.student;
                 var curStudentResume = await _context.Resumes.FirstOrDefaultAsync(x => x.student == curStudent);
 
-                responds.Add(new VacancyRespond
+                responds.Add(new VacancyRespondViewModel
                 {
                     Email = curStudent.Email,
 
@@ -152,7 +152,14 @@ namespace ProcessAuto.Controllers
                     AboutYourself = curStudentResume.AboutYourself,
                     Stack = curStudentResume.Stack,
                     ProgrammingLanguages = curStudentResume.ProgrammingLanguages,
-                    Hobbies = curStudentResume.Hobbies
+                    Hobbies = curStudentResume.Hobbies,
+
+                    RespondId = r.Id,
+
+                    RespondStage = r.VacancyStage,
+                    StudentsVerdict = r.StudentsVerdict,
+
+                    InterviewDate = r.InterviewDate
                 });
             }
 
@@ -183,6 +190,7 @@ namespace ProcessAuto.Controllers
             await _context.SaveChangesAsync();
             return this.RedirectToAction("Index");
         }
+       
 
         //// GET: Companies/Delete/5
         //public async Task<IActionResult> Delete(int? id)
