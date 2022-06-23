@@ -5,78 +5,54 @@
     ViewData["Title"] = "Log in";
 }
 
-<h1>@ViewData["Title"]</h1>
-<div class="row">
-    <div class="col-md-4">
-        <section>
-            <form id="account" method="post">
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                <div asp-validation-summary="All" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="Input.Email"></label>
-                    <input asp-for="Input.Email" class="form-control" />
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Input.Password"></label>
-                    <input asp-for="Input.Password" class="form-control" />
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label asp-for="Input.RememberMe">
-                            <input asp-for="Input.RememberMe" />
-                            @Html.DisplayNameFor(m => m.Input.RememberMe)
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Log in</button>
-                </div>
-                <div class="form-group">
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                </div>
-            </form>
-        </section>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h4>Use another service to log in.</h4>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                            for details on setting up this ASP.NET application to support logging in via external services.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="../wwwroot/css../wwwroot/css/style.css">
+</head>
+<body>
+	<form class="authorization screen" id="account" method="post" method="post">
+		<div class="overlap-group">
+			<img class="image-P3A5Dz ignore" src="https://media.discordapp.net/attachments/753528290714583101/989573769590882324/back.png">
+			<img class="image-QTLrs4" src="https://media.discordapp.net/attachments/753528290714583101/989573769276305439/table.png">
+			
+		</div>
+		<div class="frame-46-P3A5Dz">
+			<h1 class="text_label-1BMqW0">Авторизация</h1>
+			<div class="frame-45-1BMqW0">
+				<div class="frame-42-oFaxJy ignore">
+					<div class="text-input-xjKpGb">
+						<div class="title-exDxpC">E-mail</div>
+						<input asp-for="Input.Email" type="text" class="input-exDxpC">
+							<div class="placeholder-Ld6Tuu"></div>
+						</input>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+						<div class="hint-exDxpC"></div>
+					</div>
+					<div class="text-input-XVdgj0">
+						<div class="title-exDxpC">Пароль</div>
+						<input asp-for="Input.Password" type="password" class="input-exDxpC">
+							<div class="placeholder-Ld6Tuu"></div>
+							@*<a href="">
+								<img class="pheye-Ld6Tuu" src="img/eye.svg">
+							</a>*@							
+						</input>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+						<div class="hint-exDxpC"></div>
+					</div>
+					<button class="submit" href="">
+						<div class="primary-button-xjKpGb">
+							<div class="text_label-3xVVMQ">ВОЙТИ</div>
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
 
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
+</body>
+</html>
+
+
+

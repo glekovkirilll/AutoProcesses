@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProcessAuto.Models.ViewModels
 {
@@ -6,6 +7,7 @@ namespace ProcessAuto.Models.ViewModels
     {
         public int respondId { get; set; }
         public int vacId { get; set; }
+
         public DateTime InterviewDate { get; set; }
 
     }

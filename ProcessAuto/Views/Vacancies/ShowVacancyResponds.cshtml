@@ -44,7 +44,7 @@
     }
     if (r.RespondStage == VacancyStage.InterviewAssigned)
     {
-         <h4>Current stage: Назначено собеседование. Текущая дата: @r.InterviewDate</h4>
+         <h4>Current stage: Назначено собеседование. Текущая дата: @r.InterviewDate.ToString("dd.MM.yyyy")</h4>
 
          <a type="button" class="btn btn-outline-success" asp-controller="VacancyResponds" asp-action="AssignInterview" asp-route-respondId="@r.RespondId" asp-route-vacId="@ViewData["VacId"]">Change interview date</a>
          <a type="button" class="btn btn-outline-danger" asp-controller="VacancyResponds" asp-action="SetStatusOfferSent" asp-route-respondId="@r.RespondId" asp-route-vacId="@ViewData["VacId"]">Send offer</a>

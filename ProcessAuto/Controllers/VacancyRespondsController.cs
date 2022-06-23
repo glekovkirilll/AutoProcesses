@@ -27,7 +27,7 @@ namespace ProcessAuto.Controllers
 
         [HttpGet]
         [Route("VacancyResponds/AssignInterview/{respondId}")]
-        public async Task<IActionResult> AssignInterview(int respondId, int vacId)
+        public IActionResult AssignInterview(int respondId, int vacId)
         {
             var model = new AssignInverviewViewModel { respondId = respondId };
             model.vacId = vacId;
