@@ -10,8 +10,10 @@
 <p>This page will be avaliable for logged user and will let them edit their resume.</p>*@
 
 <h4>@ViewData["Title"]</h4>
-<a class="btn btn-btn-outline-success" asp-area="" asp-controller="Vacancies" asp-action="Create">Create</a>
-
+@if (User.IsInRole("Company"))
+{
+    <a class="btn btn-btn-outline-success" asp-area="" asp-controller="Vacancies" asp-action="Create">Create</a>
+}
 @{
     IEnumerable<VacancyViewModel> vacancies = ViewData["Vacancies"] as IEnumerable<VacancyViewModel>; 
 }

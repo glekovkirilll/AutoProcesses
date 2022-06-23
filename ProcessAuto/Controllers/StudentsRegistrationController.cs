@@ -51,7 +51,7 @@ namespace ProcessAuto.Controllers
                             Name = reader.GetValue(1).ToString(),
                             MiddleName = reader.GetValue(2).ToString(),
                             Email = reader.GetValue(3).ToString(),
-                            Password = reader.GetValue(4).ToString()
+                            Password = "123456qW!"
                         });
                     }
                 }

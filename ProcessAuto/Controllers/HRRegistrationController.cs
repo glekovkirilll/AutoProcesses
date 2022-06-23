@@ -53,8 +53,8 @@ namespace ProcessAuto.Controllers
                             Name = reader.GetValue(1).ToString(),                          
                             MiddleName = reader.GetValue(2).ToString(),
                             Email = reader.GetValue(3).ToString(),
-                            Password = reader.GetValue(4).ToString(),
-                            Company = Int32.Parse(reader.GetValue(5).ToString())
+                            Password = "123456qW!",
+                            Company = Int32.Parse(reader.GetValue(4).ToString())
                             
                         });
                     }

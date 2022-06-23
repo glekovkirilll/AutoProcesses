@@ -947,12 +947,22 @@ pre code {
         width: 419px;
     }
 
+
     .text-input-XVdgj0 {
         background-color: transparent;
         height: 88px;
         left: 0px;
         position: absolute;
         top: 104px;
+        width: 419px;
+    }
+
+    .text-input-xH6 {
+        background-color: transparent;
+        height: 88px;
+        left: 0px;
+        position: absolute;
+        top: 154px;
         width: 419px;
     }
 
@@ -1021,7 +1031,7 @@ pre code {
 
     .hint-exDxpC {
         background-color: transparent;
-        color: #697a89;
+        color: #33134b;
         font-family: var(--font-family-manrope);
         font-size: var(--font-size-xxs);
         font-style: normal;
@@ -1036,6 +1046,10 @@ pre code {
         top: 71px;
         white-space: nowrap;
         width: 419px;
+    }
+
+    .stayLogIn{
+        top: -10px;
     }
 
     .primary-button-xjKpGb {

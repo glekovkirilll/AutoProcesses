@@ -11,15 +11,15 @@
     @*<input type="hidden" value="@ViewBag.BookId" name="BookId" />*@
     <table>
         <tr><td><p> About yourself </p></td>
-            <td><input asp-for="AboutYourself" type="text" name="AboutYourself" value="@Model.AboutYourself"/> </td></tr>
+            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="AboutYourself" name="AboutYourself" value="@Model.AboutYourself" style="width: 600px"></textarea> </td></tr>
         <tr><td><p> Programming Languages </p></td>
-            <td><input asp-for="ProgrammingLanguages" type="text" name="ProgrammingLanguages" value="@Model.ProgrammingLanguages"/> </td></tr>
+            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="ProgrammingLanguages" type="textarea" name="ProgrammingLanguages" style="width: 600px" value="@Model.ProgrammingLanguages"> </textarea></td></tr>
         <tr><td><p> Stack </p></td>
-            <td><input asp-for="Stack" type="text" name="Stack" value="@Model.Stack"/> </td></tr>
+            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="Stack" type="textarea" name="Stack" value="@Model.Stack" style="width: 600px"></textarea> </td></tr>
         <tr><td><p> Experience </p></td>
-            <td><input asp-for="WorkingExperience" type="text" name="WorkingExperience" value="@Model.WorkingExperience"/> </td></tr>
+            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="WorkingExperience" type="textarea" name="WorkingExperience" style="width: 600px" value="@Model.WorkingExperience"></textarea> </td></tr>
         <tr><td><p> Hobbies </p></td>
-            <td><input asp-for="Hobbies" type="text" name="Hobbies" value="@Model.Hobbies"/> </td></tr>       
+            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="Hobbies" type="textarea" name="Hobbies" value="@Model.Hobbies" style="width: 600px"></textarea> </td></tr>       
       
     </table>
      <button class="btn btn-success" value="Save changes" type="submit">Save changes</button>
