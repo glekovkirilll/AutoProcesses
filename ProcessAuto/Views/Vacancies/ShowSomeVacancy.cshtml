@@ -43,7 +43,7 @@
 
 
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-    @if (User.IsInRole("Admin") == false ) {
+    @if (User.IsInRole("Student")) {
   <div class="btn-group mr-2" role="group" aria-label="First group">
         @if (ViewData["checkIfAlreadyResponded"].ToString() == "0" || User.IsInRole("Student"))
         {
