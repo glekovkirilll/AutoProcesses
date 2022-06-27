@@ -55,17 +55,17 @@
         }
     </div>
     }
-    @if (User.IsInRole("Admin")) {
+    @if (User.IsInRole("Company")) {
   <div class="btn-group mr-2" role="group" aria-label="First group">
     <a class="btn btn-light" asp-area="" asp-controller="Vacancies" asp-action="ShowVacancyResponds" asp-route-vacId="@ViewData["VacancyId"]">Show Responds</a>
   </div>
     }
-    @if (User.IsInRole("Admin")) {
+    @if (User.IsInRole("Admino")) {
   <div class="btn-group mr-2" role="group" aria-label="First group">
     <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@ViewBag.Id">Delete</a>
   </div>  
     }
-    @if (User.IsInRole("Admin") == false) {
+    @if (User.IsInRole("Admino") == false) {
   <div class="btn-group mr-2" role="group" aria-label="Second group">
     <div class="btn-group-toggle" data-toggle="buttons">
   @*<label class="btn btn-outline-warning">

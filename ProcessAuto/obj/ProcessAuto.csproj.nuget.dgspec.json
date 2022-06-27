@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj": {}
+    "C:\\Users\\ukwim\\Documents\\PROCESs\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj": {
+    "C:\\Users\\ukwim\\Documents\\PROCESs\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj",
+        "projectUniqueName": "C:\\Users\\ukwim\\Documents\\PROCESs\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj",
         "projectName": "ProcessAuto",
-        "projectPath": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj",
-        "packagesPath": "C:\\Users\\uz1mane\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\uz1mane\\source\\repos\\AutoProcesses\\ProcessAuto\\obj\\",
+        "projectPath": "C:\\Users\\ukwim\\Documents\\PROCESs\\AutoProcesses\\ProcessAuto\\ProcessAuto.csproj",
+        "packagesPath": "C:\\Users\\ukwim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ukwim\\Documents\\PROCESs\\AutoProcesses\\ProcessAuto\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\uz1mane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ukwim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
