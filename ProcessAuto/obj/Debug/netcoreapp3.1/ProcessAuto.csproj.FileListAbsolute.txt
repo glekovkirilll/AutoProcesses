@@ -1066,3 +1066,6 @@ C:\Users\ukwim\Documents\proc\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\
 C:\Users\ukwim\Documents\proc\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\ProcessAuto.dll
 C:\Users\ukwim\Documents\proc\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\ProcessAuto.pdb
 C:\Users\ukwim\Documents\proc\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\ProcessAuto.genruntimeconfig.cache
+C:\Users\uz1mane\source\repos\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\Deanery\ShowAllStudents.cshtml.g.cs
+C:\Users\uz1mane\source\repos\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\Deanery\ShowStudentsProgress.cshtml.g.cs
+C:\Users\uz1mane\source\repos\AutoProcesses\ProcessAuto\obj\Debug\netcoreapp3.1\Razor\Views\Vacancies\ShowCompaniesVacancies.cshtml.g.cs

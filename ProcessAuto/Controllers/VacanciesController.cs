@@ -38,6 +38,28 @@ namespace ProcessAuto.Controllers
             this.ViewData["Vacancies"] = vacancies;
             return View();
         }
+        
+
+        [HttpGet]
+        [Route("Vacancies/ShowCompaniesVacancies")]
+        public async Task<IActionResult> ShowCompaniesVacancies()
+        {
+            //var student = await this._context.Users.SingleOrDefaultAsync(x => x.Id == studentId);
+            var Email = User.Identity.Name;
+            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == Email);
+            var currentUserCompanyId = currentUser.Company.Value;
+
+            var vacancies = _context.Vacancies.Where(x => x.CompanyId == currentUserCompanyId).Select(x => new VacancyViewModel
+            {
+                Id = x.Id,
+                Company = x.Company,
+                Position = x.Position,
+                Slots = x.Slots,
+                Stack = x.Stack
+            });
+            this.ViewData["Vacancies"] = vacancies;
+            return View();
+        }
 
         // GET: Companies/Create
         [HttpGet]
@@ -55,7 +77,7 @@ namespace ProcessAuto.Controllers
         [Route("Vacancies/Create")]
 
         public async Task<IActionResult> Create(VacancyViewModel model)
-            {
+        {
             var Email = User.Identity.Name;
             var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.Email == Email);
             if (ModelState.IsValid)

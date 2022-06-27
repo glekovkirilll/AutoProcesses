@@ -8,7 +8,7 @@ namespace ProcessAuto.Models.ViewModels
         public int respondId { get; set; }
         public int vacId { get; set; }
 
-        public DateTime InterviewDate { get; set; }
+        public string InterviewDate { get; set; }
 
     }
 }

@@ -27,7 +27,7 @@ namespace ProcessAuto.Controllers
 
         [HttpGet]
         [Route("VacancyResponds/AssignInterview/{respondId}")]
-        public IActionResult AssignInterview(int respondId, int vacId)
+        public async Task<IActionResult> AssignInterview(int respondId, int vacId)
         {
             var model = new AssignInverviewViewModel { respondId = respondId };
             model.vacId = vacId;
@@ -44,7 +44,15 @@ namespace ProcessAuto.Controllers
             if (respond == null)
                 return NotFound("No such respond");
 
-            respond.InterviewDate = model.InterviewDate;
+            var dateArray = model.InterviewDate.ToCharArray();
+            var newDateArray = model.InterviewDate.ToCharArray();
+            newDateArray[0] = dateArray[3];
+            newDateArray[1] = dateArray[4];
+            newDateArray[3] = dateArray[0];
+            newDateArray[4] = dateArray[1];
+            var newDate = new string(newDateArray);
+            respond.InterviewDate = Convert.ToDateTime(newDate);
+
             respond.VacancyStage = Models.VacancyStage.InterviewAssigned;
             await _context.SaveChangesAsync();
 

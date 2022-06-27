@@ -23,12 +23,12 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                       @* <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        </li>*@
                         @if (User.IsInRole("Deanery"))
                         {
                             <li class="nav-item dropdown">
@@ -43,10 +43,25 @@
                               </ul>
                             </li>
                         }
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Companies" asp-action="Index">Companies</a>
-                        </li>
+                        @if (SignInManager.IsSignedIn(User) && (User.IsInRole("Deanery") || User.IsInRole("Admin")))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Deanery" asp-action="ShowAllStudents">Students</a>
+                            </li>
+                        }
+                        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Company"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Vacancies" asp-action="ShowCompaniesVacancies">My vacancies</a>
+                            </li>
+                        }
                         @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Companies" asp-action="Index">Companies</a>
+                            </li>
+                        }
+                        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Student"))
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Resume" asp-action="Index">Resume</a>
@@ -63,11 +78,12 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Roles</a>
                             </li>
                         }            
-                        @*@if(User.IsInRole("Student")){*@
+                        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Student"))
+                        {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="VacancyResponds" asp-action="ShowSelfResponds">My Responds</a>
                             </li>
-                        @*}*@        
+                        }        
                     </ul>
                 </div>
             </div>

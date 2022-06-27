@@ -60,11 +60,11 @@ namespace ProcessAuto.Controllers
             _context.Resumes.Add(new Resume
             {
                 student = curUser,
-                Stack = null,
-                ProgrammingLanguages = null,
-                WorkingExperience = null,
-                AboutYourself = null,
-                Hobbies = null,
+                Stack = "no stack",
+                ProgrammingLanguages = "no langs",
+                WorkingExperience = "no xp",
+                AboutYourself = "student",
+                Hobbies = "no hobbies",
             });
             await _context.SaveChangesAsync();
             return;
