@@ -40,8 +40,10 @@
     {
         <h4>Current stage: Получен отклик от студента</h4>
 
+        <div class="btn-group btn-group-justified">
         <a type="button" class="btn btn-outline-success" asp-controller="VacancyResponds" asp-action="AssignInterview" asp-route-respondId="@r.RespondId" asp-route-vacId="@ViewData["VacId"]">Assign an Interview</a>
         <a type="button" class="btn btn-outline-danger" asp-controller="VacancyResponds" asp-action="SetStatusNoOffer" asp-route-respondId="@r.RespondId" asp-route-vacId="@ViewData["VacId"]">Not interested</a>
+        </div>
     }
     if (r.RespondStage == VacancyStage.InterviewAssigned)
     {
