@@ -191,28 +191,28 @@ namespace ProcessAuto.Controllers
             return View();
         }
 
-        [HttpGet]
-        [Route("Delete/{id}")]
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //[HttpGet]
+        //[Route("Delete/{id}")]
+        //public async Task<IActionResult> Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var vacancy = await _context.Vacancies
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (vacancy == null)
-            {
-                return NotFound();
-            }
+        //    var vacancy = await _context.Vacancies
+        //        .FirstOrDefaultAsync(m => m.Id == id);
+        //    if (vacancy == null)
+        //    {
+        //        return NotFound();
+        //    }
 
 
-            _context.Vacancies.Remove(vacancy);
-            await _context.SaveChangesAsync();
-            return this.RedirectToAction("Index");
-        }
-       
+        //    _context.Vacancies.Remove(vacancy);
+        //    //await _context.SaveChangesAsync();
+        //    return this.RedirectToAction("Index");
+        //}
+
 
         //// GET: Companies/Delete/5
         //public async Task<IActionResult> Delete(int? id)
@@ -232,7 +232,7 @@ namespace ProcessAuto.Controllers
         //    return View(company);
         //}
 
-        //// POST: Companies/Delete/5
+        ////POST: Companies/Delete/5
         //[HttpPost, ActionName("Delete")]
         //[ValidateAntiForgeryToken]
         //public async Task<IActionResult> DeleteConfirmed(int id)

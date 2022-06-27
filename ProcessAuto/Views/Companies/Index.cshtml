@@ -7,7 +7,7 @@
     
 }
 
-<h1>Index</h1>
+<h1>Companies</h1>
 
 @if (User.IsInRole("Admin"))
 {
@@ -40,7 +40,8 @@
                 @Html.DisplayFor(modelItem => item.Info)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LinkToWebsite)
+                <a href=@Html.DisplayFor(modelItem => item.LinkToWebsite)>@Html.DisplayFor(modelItem => item.LinkToWebsite)</a>
+                
             </td>
             @if((User.IsInRole("Company") && ViewBag.User == item.Name) || User.IsInRole("Admin")){
             <td>
