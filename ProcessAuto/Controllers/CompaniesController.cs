@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using ProcessAuto.Areas.Identity.Data;
 using ProcessAuto.Data;
 using ProcessAuto.Models;
 using ProcessAuto.Models.Enums;
@@ -17,10 +19,14 @@ namespace ProcessAuto.Controllers
     public class CompaniesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<PAUser> _userManager;
+        private readonly SignInManager<PAUser> _signInManager;
 
-        public CompaniesController(ApplicationDbContext context)
+        public CompaniesController(ApplicationDbContext context, UserManager<PAUser> userManager, SignInManager<PAUser> signInManager)
         {
             _context = context;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         // GET: Companies
@@ -32,6 +38,9 @@ namespace ProcessAuto.Controllers
             {
                 ViewBag.User = ((CompanyNames)currentUser.Company).ToString();
             }
+
+            
+
             return View(await _context.Companies.ToListAsync());
         }
 

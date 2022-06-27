@@ -15,14 +15,16 @@ namespace ProcessAuto.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly UserManager<PAUser> _userManager;
+        private readonly SignInManager<PAUser> _signInManager;
 
-        public HomeController(ILogger<HomeController> logger, UserManager<PAUser> userManager)
+        public HomeController(ILogger<HomeController> logger, UserManager<PAUser> userManager, SignInManager<PAUser> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
             var userId = _userManager.GetUserId(HttpContext.User);
             if (userId == null)
@@ -31,13 +33,31 @@ namespace ProcessAuto.Controllers
             }
             else
             {
-                PAUser user = _userManager.FindByIdAsync(userId).Result;
-                return View(user);
+                PAUser user1 = _userManager.FindByIdAsync(userId).Result;
+                return View(user1);
             }
+
+            
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> Privacy()
         {
+            var user = new PAUser
+            {
+                UserName = "admin@gmail.com",
+                Email = "admin@gmail.com",
+                EmailConfirmed = true,
+                Name = "Admin",
+                Surname = "#1",
+                MiddleName = "!!!"
+            };
+
+            var result = await _userManager.CreateAsync(user, "123456qW!");
+            if (result.Succeeded)
+            {
+                IdentityResult roleresult = await _userManager.AddToRoleAsync(user, "ADMIN");
+            }
+
             return View();
         }
 

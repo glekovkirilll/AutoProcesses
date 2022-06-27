@@ -76,6 +76,7 @@ namespace ProcessAuto.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = new PAUser { UserName = Input.Email, Email = Input.Email };
+                IdentityResult roleresult = await _userManager.AddToRoleAsync(user, "ADMIN");
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
