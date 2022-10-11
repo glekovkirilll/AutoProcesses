@@ -43,9 +43,9 @@
 
 
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-    @if (User.IsInRole("Student")) {
+    @if (User.IsInRole("Student") && User.IsInRole("Admin") == false) {
   <div class="btn-group mr-2" role="group" aria-label="First group">
-        @if (ViewData["checkIfAlreadyResponded"].ToString() == "0" || User.IsInRole("Student"))
+        @if (ViewData["checkIfAlreadyResponded"].ToString() == "0")
         {
             <a class="btn btn-light" asp-area="" asp-controller="Vacancies" asp-action="RespondOnVacancy" asp-route-vacId="@ViewData["VacancyId"]">Respond</a>
         }
